@@ -1,148 +1,360 @@
 <!DOCTYPE html>
-    <html>
-      <head>
-        <title>My Portfolio</title>
-        
-<style>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  
-    
-body, h1, h2, h3, p, ul, li {
-margin: 0;
-padding: 0;
-}
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+ background: url("https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830027.jpg?w=2000") no-repeat center fixed;
+ background-size: cover;
+        }
 
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
 
-body {
-font-family: Arial, sans-serif;
-background-image: ;: url('') ;
-}
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
 
-header {
-background-color: #333;
-color: white;
-text-align: center;
-padding: 2rem 0;
-}
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
 
-nav ul {
-list-style: none;
-display: flex;
-justify-content: center;
-background-color: #f4f4f4;
-padding: 1rem 0;
-}
+        /* Navigation styles */
+       nav {
+            background-color: #333;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-nav ul li {
-margin: 0 1rem;
-}
+        nav ul {
+            display: flex;
+            justify-content: center;
+          background-color: rgba(0, 0, 0, 0.6);
+            padding: 1rem 0;
+              list-style: none;
+        }
 
-nav a {
-text-decoration: none;
-color: #333;
-font-weight: bold;
-}
+        nav ul li {
+            margin: 0 1rem;
+            list-style: none;
+        }
 
-section {
-padding: 3rem 0;
-text-align: center;
-}
-
-.project {
-margin-bottom: 2rem;
-}
-
-.project img {
-max-width: 100%;
-}
-
-.contact-method {
-margin: 1rem;
-}
-
-.contact-method img {
-width: 30px;
-height: 30px;
-margin-right: 0.5rem;
-vertical-align: middle;
-}
-
-footer {
-background-color: #333;
-color: white;
-text-align: center;
-padding: 1rem 0;
-}
-
-</style>
-      </head>
-   
-  <body>
-      <header>
-          <h1>SAHIR</h1>
-          <p>Web Developer</p>
-      </header>
-      <nav>
-          <ul>
-              <li><button><a href="#about">About</a></button></li>
-              <li><button><a href="#projects">Projects</a></button></li>
-              <li><button><a href="#skills">Skills</a></button></li>
-              <li><button><a href="#contact">Contact</a></button></li>
-          </ul>
-      </nav>
-      <section id="about">
-          <h2>About Me</h2> <br>
-          <p>Write a brief introduction about yourself. Highlight your skills, experiences, and interests.<br> <br>
-          I'm Sahir,<br> <br> I am student at VIT-AP Univercity <br> </p>
-      </section>
-      <section id="projects">
-          <h2>Projects</h2>
-          <div class="project">
-              <img src="https://tse3.mm.bing.net/th/id/OIP.BzTeDZpqDvqg_VOq_pfi2QHaEK?pid=ImgDet&rs=1" alt="Project 1">
-              <h3>Project 1</h3> <br>
-              <p>This is a project about the glasses made for Blind People attached with sensors.</p>
-          </div>
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
           
-      </section>
-      <section id="skills">
-          <h2>Skills</h2> <br>
-<p>
-<ul style="list-style-type:disc;">
-<li> Java </li><br>
-<li> Python </li><br>
-<li> HTML </li><br>
+        }
+
+        nav a:hover {
+            background-color: #ff7f50;
+            color: #ffffff;
+        }
+
+        /* Section styles */
+        section {
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            opacity: 0.8;
+        }
+
+        /* Project styles */
+        .project {
+            margin-bottom: 3rem;
+            text-align: left;
+        }
+
+        .project h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .project p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
+        /* Contact method styles */
+        .contact-method {
+            margin: 1rem;
+            display: inline-block;
+        }
+
+        .contact-method a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .contact-method a img {
+            width: 30px;
+            height: 30px;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
+
+        .contact-method a:hover {
+            color: #ff7f50;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .login-button {
+        position: absolute;
+        top: 6rem;
+        right: 1rem;
+        background-color: #ff7f50; /* Orange color */
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+       }
+
+        /* Login modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+        }
+
+        .close-button {
+        position: absolute;
+        top: 8rem;
+        right: 30rem;
+        font-size: 3rem;
+        color: #ffffff;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        }
+        #loginForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #loginForm label {
+            margin: 0.5rem 0;
+        }
+
+        #loginForm input {
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.25rem 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        #loginForm button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #loginForm button:hover {
+            background-color: #ff7f50;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SAHIR</h1>
+        <p>Web Developer</p>
+        <button class="login-button" id="loginButton">Sign Up</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+<li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+   <section id="about">
+        <h2>About Me</h2>
+        <p>I'm Sahir, a student at VIT-AP University.</p>
+<p>I'm cuurently pursuing my 3rd year in Intg.MTECH SE course.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project"><center><img src="https://tse3.mm.bing.net/th/id/OIP.BzTeDZpqDvqg_VOq_pfi2QHaEK?pid=ImgDet&rs=1"alt="Project 1">
+       <center><h3>Project 1</h3> <br>
+       <p>This is a project about the glasses made for Blind People attached with sensors.</p>
+   <p>It helps blind people detect any obstacles which are present in their path. </p><br>
+<br>
+<br>
+<h3>Project 2</h3>
+<div class="project"><center><img src="https://i.ytimg.com/vi/kewza7RyKMQ/maxresdefault.jpg"alt="Project 2" style=width:500px>
+<p>It is a bluetooth controlled car made by using aurdino. </p>
+<p>It has a camera and sensor which can detect the obstacles and avoid them. </p>
+</div>
+
+     </div>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Java</li><br>
+            <li>Python</li><br>
+            <li>HTML</li><br>
+            <li>C#</li><br>
+        </ul>
+    </section>
+    </div>
+<section id="hobbies">
+<h2>Hobbies</h2>
+<ul>
+<li>Football</li><br>
+<li>Reading</li><br>
+<li>Writing</li><br>
+<li>Cooking</li><br>
 </ul>
-</p>
-      </section>
-      <section id="contact">
-          <h2>Contact Me</h2>
-          <div class="contact-method">
-              <a href="https://https://www.linkedin.com" target="_blank">
-                  <img src="https://tse4.mm.bing.net/th/id/OIP.w_zDkEJ9aLiWR-g0rff8hwHaHa?pid=ImgDet&rs=1" alt="LinkedIn">
-                  LinkedIn
-              </a>
-          </div>
-          <div class="contact-method">
-              <a href="mailto:sahirshaik487@gmail.com">
-                  <img src="https://tse1.mm.bing.net/th/id/OIP.TODrg8JbRbVEcJaWHbeN8gHaHa?pid=ImgDet&rs=1">
-                  Email
-              </a>
-          </div>
-          <div class="contact-method">
-              <a href="https://github.com" target="_blank">
-                  <img src="https://tse2.mm.bing.net/th/id/OIP.eoZPB2gfGH-1ckaL_JSZdwHaHg?pid=ImgDet&rs=1" alt="GitHub">
-                  GitHub
-              </a>
-          </div>
-          <div class="contact-method">
-              <a href="https://wa.me/7093569218" target="_blank">
-                  <img src="https://1.bp.blogspot.com/-PM8_Rig8V0M/XxFkv-2f3hI/AAAAAAAACSU/vB1BqbuhFCMyJ8OGCVstFiMLFmavCLqrwCPcBGAYYCw/s1600/whatsapp-logo-1.png" alt="WhatsApp">
-                  WhatsApp
-              </a>
-          </div>
-      </section>
-      <footer>
-          <p>&copy; 2023 Your Portfolio. All rights reserved.</p>
-      </footer>
-  </body>
-  </html>
+</section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-method">
+            <a href="https://www.linkedin.com" target="_blank"><img src="https://tse4.mm.bing.net/th/id/OIP.w_zDkEJ9aLiWR-g0rff8hwHaHa?pid=ImgDet&rs=1" alt="LinkedIn">LinkedIn</a>
+        </div>
+        <div class="contact-method">
+            <a href="mailto:sahirshaik487@gmail.com"><img src="https://tse1.mm.bing.net/th/id/OIP.TODrg8JbRbVEcJaWHbeN8gHaHa?pid=ImgDet&rs=1" alt="Email">Email</a>
+        </div>
+        <div class="contact-method">
+            <a href="https://github.com" target="_blank"><img src="https://tse2.mm.bing.net/th/id/OIP.eoZPB2gfGH-1ckaL_JSZdwHaHg?pid=ImgDet&rs=1" alt="GitHub">GitHub</a>
+        </div>
+        <div class="contact-method">
+            <a href="https://wa.me/7093569218" target="_blank"><img src="https://1.bp.blogspot.com/-PM8_Rig8V0M/XxFkv-2f3hI/AAAAAAAACSU/vB1BqbuhFCMyJ8OGCVstFiMLFmavCLqrwCPcBGAYYCw/s1600/whatsapp-logo-1.png" alt="WhatsApp">WhatsApp</a>
+        </div>
+    </section>
+     <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-button" id="closeButton">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="loginForm" onsubmit="return validateLoginForm()">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Your Portfolio. All rights reserved.</p>
+    </footer><script>
+    function validateLoginForm() {
+        var firstName = document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        // Regular expressions to allow only letters, numbers, and underscores
+        var validEmailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        var validPasswordPattern = /^[a-zA-Z0-9_]+$/;
+        var validNamePattern = /^[A-Za-z]+$/;
+
+        if (firstName === "" || lastName === "" || email === "" || password === "") {
+            alert("Please fill in all fields.");
+            return false;
+        }
+
+        if (!validNamePattern.test(firstName) || !validNamePattern.test(lastName)) {
+            alert("First name and last name can only contain letters.");
+            return false;
+        }
+
+        if (!validUsernamePattern.test(email)) {
+            alert("Username can only contain letters, numbers, and underscores.");
+            return false;
+        }
+
+        if (!validPasswordPattern.test(password)) {
+            alert("Password can only contain letters, numbers, and underscores.");
+            return false;
+        }
+
+        return true;
+    }
+        document.addEventListener("DOMContentLoaded", function() {
+            const loginButton = document.getElementById("loginButton");
+            const loginModal = document.getElementById("loginModal");
+            const closeButton = document.getElementById("closeButton");
+           
+            loginButton.addEventListener("click", function() {
+                loginModal.style.display = "flex";
+            });
+
+            closeButton.addEventListener("click", function() {
+                loginModal.style.display = "none";
+            });
+        });
+    </script>
+</body>
+</html>
